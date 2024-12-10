@@ -1,0 +1,42 @@
+@import "variables";
+@import 'mixins';
+
+
+.parent{
+    width: 100vw;
+    height: 100vh;
+    background-color: $firstColor;
+    display: flex;
+    .left{
+        width: 20%;
+        height: 100%;
+        background-color: $secondColor;
+        h1{
+            color: $fourthColor;
+        }
+    }
+    .right{
+    
+        width: 80%;
+        height: 100%;
+        background-color: $thirdColor;
+        .one{     
+            @include butt-structure();
+            background-color: blue;
+        }
+        .two{    
+            @include butt-structure();  
+            background-color: red;
+        }
+        .three{
+            @include butt-structure();
+            background-color: green;
+        }
+        .one-round{
+            @extend .one;
+            border-radius: 50%;
+        }
+
+    }
+}
+
